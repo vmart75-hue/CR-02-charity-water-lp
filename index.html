@@ -7,19 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="https://www.charitywater.org" target="_blank" rel="noopener">charity: water</a>
+            <nav class="nav">
+                <a href="#donate">Donate</a>
+                <a href="#volunteer">Volunteer</a>
+                <a href="#campus">Campus</a>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section: This is the main banner at the top of the page -->
     <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
+        <div class="hero-inner container">
+            <!-- Main headline -->
+            <h1>Bring Clean Water to a Community — Join the Movement</h1>
+            <!-- Subheadline -->
+            <p>Small student donations add up. $10 can make a real difference.</p>
+            <div class="hero-ctas">
+                <a id="quick-donate" class="donate-button" href="#donate">Donate $10</a>
+                <a class="secondary-button" href="#volunteer">Volunteer</a>
+            </div>
+        </div>
     </section>
 
     <!-- Story Section: This tells the story of the nonprofit -->
     <section class="story">
         <h2>Our Story</h2>
         <p>
-         
+            charity: water is dedicated to bringing clean and safe drinking water to people around the world. Students like you can power change on campus and across communities — through donations, events, and friendly campus challenges.
     </section>
 
     <!-- Real-World Impact Story Section -->
@@ -38,10 +55,52 @@
     </section>
 
     <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
+    <section id="donate" class="call-to-action">
         <h2>Make a Difference</h2>
         <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
+
+        <div class="donation-section">
+            <div class="donation-options" role="radiogroup" aria-label="Donation amounts">
+                <button class="amount-button" data-amount="10">$10</button>
+                <button class="amount-button" data-amount="25">$25</button>
+                <button class="amount-button" data-amount="50">$50</button>
+                <button class="amount-button" data-amount="custom">Custom</button>
+            </div>
+
+            <div class="donation-action">
+                <input id="custom-amount" type="number" min="1" placeholder="Custom amount" aria-label="Custom amount">
+                <button id="donate-now" class="donate-button">Donate</button>
+            </div>
+
+            <div class="progress-wrap">
+                <div class="progress-info">
+                    <span id="raised-amount">$1,200</span> raised of <strong id="goal-amount">$5,000</strong>
+                </div>
+                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="5000" aria-valuenow="1200">
+                    <div id="progress-bar" class="progress-bar" style="width:24%"></div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <section id="campus" class="campus-section">
+        <h2>Campus Challenge</h2>
+        <p>Start or join a campus team — track collective progress and compete to unlock prizes and recognition on campus.</p>
+        <div class="campus-meter">
+            <div class="meter-label">Your Campus: <strong id="campus-count">42</strong> supporters</div>
+            <div class="progress campus-progress" role="progressbar" aria-valuemin="0" aria-valuemax="200" aria-valuenow="42">
+                <div id="campus-bar" class="progress-bar" style="width:21%"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>Built for class — inspired by charity: water. <a href="https://www.charitywater.org" target="_blank" rel="noopener">Official site</a></small>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
 </body>
 </html>
